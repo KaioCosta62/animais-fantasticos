@@ -38,7 +38,7 @@ body{
 .menu ul{
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
   gap: 10px;
 }
 
@@ -63,7 +63,7 @@ body{
 
 .titulo{
   font-family: 'Playfair Display SC', serif;
-  font-size: 4rem;
+  font-size: 6rem;
   line-height: 1;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -214,5 +214,26 @@ body{
     grid-column: 1;
     margin-bottom: 0px;
   }
+}
 
+.js .js-tabconteudo section{
+  display: none;
+}
+
+.js .js-tabconteudo section.ativo{
+  display: block;
+  animation: abrirConteudoTab 0.5s forwards;
+}
+
+
+@keyframes abrirConteudoTab {
+  from{
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
 }
