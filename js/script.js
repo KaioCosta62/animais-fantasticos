@@ -18,3 +18,21 @@ if (verificarItens) {
     })
   })
 }
+
+
+/* Accordion */
+
+const perguntasFaq = document.querySelectorAll('.faq-lista dt')
+const respostasFaq = document.querySelectorAll('.faq-lista dd')
+
+function exibirRespostaAccordion(e){
+  const resposta = e.target.nextElementSibling
+  respostasFaq.forEach((resposta) => {
+    resposta.classList.remove('ativo')
+  })
+  resposta.classList.add('ativo')
+}
+
+perguntasFaq.forEach((pergunta) => {
+  pergunta.addEventListener('click', exibirRespostaAccordion)
+})

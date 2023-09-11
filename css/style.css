@@ -131,6 +131,7 @@ body{
   font-weight: bold;
   margin: 2rem 0 0.5rem;
   color: #e54;
+  cursor: pointer ;
 }
 
 .faq-lista dt::before{
@@ -225,6 +226,14 @@ body{
   animation: abrirConteudoTab 0.5s forwards;
 }
 
+.js-faq dd{
+  display: none;
+}
+
+.js-faq dd.ativo{
+  display: block;
+  animation: abrirRespostaFaq 0.5s forwards;
+}
 
 @keyframes abrirConteudoTab {
   from{
@@ -235,5 +244,17 @@ body{
   to{
     opacity: 1;
     transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes abrirRespostaFaq {
+  from{
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate(0, 0, 0);
   }
 }
