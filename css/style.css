@@ -134,15 +134,6 @@ body{
   cursor: pointer ;
 }
 
-.faq-lista dt::before{
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 10px;
-  background:#fb5;
-  margin-right: 10px;
-}
-
 .faq-lista dd{
   font-family: 'Arial';
   margin-bottom: .5rem;
@@ -228,6 +219,15 @@ body{
 
 .js .js-faq dd{
   display: none;
+}
+
+.js .js-faq dt::after{
+  content: '⤦';
+  margin-left: 10px;
+}
+
+.js .js-faq dt.ativo::after{
+  content: '⤣ ';
 }
 
 .js .js-faq dd.ativo{

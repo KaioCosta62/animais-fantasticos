@@ -27,14 +27,10 @@ const respostasFaq = document.querySelectorAll('.faq-lista dd')
 const verificarItensAcordion = perguntasFaq.length > 0 && respostasFaq.length > 0
 
 if(verificarItensAcordion){
-  respostasFaq[0].classList.add('ativo')
-
   function exibirRespostaAccordion(e){
     const resposta = e.target.nextElementSibling
-    respostasFaq.forEach((resposta) => {
-      resposta.classList.remove('ativo')
-    })
-    resposta.classList.add('ativo')
+    resposta.classList.toggle('ativo')
+    e.target.classList.toggle('ativo')
   }
 
   perguntasFaq.forEach((pergunta) => {
