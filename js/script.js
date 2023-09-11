@@ -51,8 +51,8 @@ initAccordion()
 
 /* Scroll suave (links internos) */
 
-function scrollSuave(){
-  const linksInternos = document.querySelectorAll('a[href^="#"]')
+function initScrollSuave(){
+  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
 
   function navegacaoInterna(e){
     e.preventDefault()
@@ -70,4 +70,4 @@ function scrollSuave(){
   })
 }
 
-scrollSuave()
+initScrollSuave()
