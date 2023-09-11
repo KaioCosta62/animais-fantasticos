@@ -47,3 +47,27 @@ function initAccordion(){
 }
 
 initAccordion()
+
+
+/* Scroll suave (links internos) */
+
+function scrollSuave(){
+  const linksInternos = document.querySelectorAll('a[href^="#"]')
+
+  function navegacaoInterna(e){
+    e.preventDefault()
+      const href = e.target.getAttribute('href')
+      const section = document.querySelector(href)
+      const alturaSection = section.offsetTop
+      scrollTo({
+        top: alturaSection,
+        behavior: 'smooth'
+      })
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener('click', navegacaoInterna)
+  })
+}
+
+scrollSuave()
