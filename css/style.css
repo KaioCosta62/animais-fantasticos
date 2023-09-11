@@ -226,11 +226,11 @@ body{
   animation: abrirConteudoTab 0.5s forwards;
 }
 
-.js-faq dd{
+.js .js-faq dd{
   display: none;
 }
 
-.js-faq dd.ativo{
+.js .js-faq dd.ativo{
   display: block;
   animation: abrirRespostaFaq 0.5s forwards;
 }
