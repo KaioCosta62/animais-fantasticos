@@ -28,15 +28,15 @@ initNavegacaoTab()
 function initAccordion(){
   const perguntasFaq = document.querySelectorAll(".faq-lista dt");
   const verificarItensAcordion = perguntasFaq.length > 0;
-
-  perguntasFaq[0].classList.add("ativo");
-  perguntasFaq[0].nextElementSibling.classList.add("ativo");
+  const ativarAccordion = 'ativo'
+  perguntasFaq[0].classList.add(ativarAccordion);
+  perguntasFaq[0].nextElementSibling.classList.add(ativarAccordion);
 
   if (verificarItensAcordion) {
     function exibirRespostaAccordion(e) {
       const resposta = e.target.nextElementSibling;
-      resposta.classList.toggle("ativo");
-      e.target.classList.toggle("ativo");
+      resposta.classList.toggle(ativarAccordion);
+      e.target.classList.toggle(ativarAccordion);
     }
 
     perguntasFaq.forEach((pergunta) => {
