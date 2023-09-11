@@ -235,6 +235,17 @@ body{
   animation: abrirRespostaFaq 0.5s forwards;
 }
 
+.js .js-section-scroll{
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translate3d(-20px, 0, 0);
+}
+
+.js .js-section-scroll.ativo{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 @keyframes abrirConteudoTab {
   from{
     opacity: 0;
